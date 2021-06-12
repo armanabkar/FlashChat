@@ -113,7 +113,9 @@ extension ChatViewController: UITableViewDataSource {
             cell.rightImageView.isHidden = false
             cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.blue)
             cell.label.textColor = UIColor(named: Constants.BrandColors.lightBlue)
-            cell.label.text = "\(message.sender):\n\(message.body)"
+            let senderLabel = "\(message.sender)\n"
+            cell.label.text = senderLabel + "\(message.body)"
+            cell.label.setSubTextColor(pSubString: senderLabel, pColor: .black, pWeight: .semibold)
         }
         
         return cell
