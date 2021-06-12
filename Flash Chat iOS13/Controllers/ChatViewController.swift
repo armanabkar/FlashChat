@@ -21,6 +21,7 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.dataSource = self
         title = Constants.appName
         navigationItem.hidesBackButton = true
@@ -28,11 +29,9 @@ class ChatViewController: UIViewController {
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         
         loadMessages()
-        
     }
     
     func loadMessages() {
-        
         db.collection(Constants.Firestore.collectionName)
             .order(by: Constants.Firestore.dateField)
             .addSnapshotListener { (querySnapshot, error) in
@@ -40,7 +39,9 @@ class ChatViewController: UIViewController {
                 self.messages = []
                 
                 if let e = error {
-                    print("There was an issue retrieving data from Firestore. \(e)")
+                    let alert = UIAlertController(title: "Error", message: "There was an issue retrieving data from Firestore; \(e)", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 } else {
                     if let snapshotDocuments = querySnapshot?.documents {
                         for doc in snapshotDocuments {
@@ -62,7 +63,6 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
-        
         if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
             db.collection(Constants.Firestore.collectionName).addDocument(data: [
                 Constants.Firestore.senderField: messageSender,
@@ -70,7 +70,9 @@ class ChatViewController: UIViewController {
                 Constants.Firestore.dateField: Date().timeIntervalSince1970
             ]) { (error) in
                 if let e = error {
-                    print("There was an issue saving data to firestore, \(e)")
+                    let alert = UIAlertController(title: "Error", message: "There was an issue saving data to firestore; \(e)", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 } else {
                     DispatchQueue.main.async {
                         self.messageTextfield.text = ""
@@ -81,21 +83,21 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
-        
         do {
             try Auth.auth().signOut()
             navigationController?.popToRootViewController(animated: true)
-            
         } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
+            let alert = UIAlertController(title: "Error", message: "Error signing out; \(signOutError)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
+    
 }
 
 
 // MARK: - UITableViewDataSource
 extension ChatViewController: UITableViewDataSource {
-    // Use UITableViewDelegate if you want to interact with rows
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
@@ -103,10 +105,8 @@ extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = messages[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
         
-        //This is a message from the current user.
         if message.sender == Auth.auth().currentUser?.email {
             cell.leftImageView.isHidden = false
             cell.rightImageView.isHidden = true
@@ -114,7 +114,6 @@ extension ChatViewController: UITableViewDataSource {
             cell.label.textColor = UIColor(named: Constants.BrandColors.blue)
             cell.label.text = message.body
         }
-        //This is a message from another sender.
         else {
             cell.leftImageView.isHidden = true
             cell.rightImageView.isHidden = false
@@ -125,6 +124,7 @@ extension ChatViewController: UITableViewDataSource {
         
         return cell
     }
+    
 }
 
 

@@ -14,6 +14,8 @@ struct Constants {
     static let cellNibName = "MessageCell"
     static let registerSegue = "RegisterToChat"
     static let loginSegue = "LoginToChat"
+    static let storyboardName = "Main"
+    static let chatViewIdentifier = "ChatScreen"
     
     struct BrandColors {
         static let purple = "BrandPurple"

@@ -25,19 +25,20 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Animating WelcomeView's text
+        animateText(Constants.appName)
+    }
+    
+    private func animateText(_ text: String) {
         titleLabel.text = ""
         var charIndex = 0.0
-        let titleText = Constants.appName
+        let titleText = text
         for letter in titleText {
             Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
                 self.titleLabel.text?.append(letter)
             }
             charIndex += 1
         }
-        
     }
-    
     
 }
 

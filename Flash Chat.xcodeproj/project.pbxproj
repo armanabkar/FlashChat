@@ -19,6 +19,7 @@
 		F0260A61264657A100EFB85C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0260A60264657A100EFB85C /* GoogleService-Info.plist */; };
 		F0260A662646693F00EFB85C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F0260A652646693F00EFB85C /* FirebaseAuth */; };
 		F0260A682646693F00EFB85C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F0260A672646693F00EFB85C /* FirebaseFirestore */; };
+		F0264D622673666F006D18D9 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D612673666F006D18D9 /* AlertController.swift */; };
 		F0DFA56A264686730042129B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA569264686730042129B /* Constants.swift */; };
 		F0DFA56D264687EA0042129B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA56C264687EA0042129B /* Message.swift */; };
 		F0DFA57526468AD10042129B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA57326468AD10042129B /* MessageCell.swift */; };
@@ -39,6 +40,7 @@
 		0B62818E235DF01000E35CAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B628190235DF01B00E35CAF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F0260A60264657A100EFB85C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F0264D612673666F006D18D9 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		F0DFA569264686730042129B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F0DFA56C264687EA0042129B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = "Flash Chat iOS13/Message.swift"; sourceTree = SOURCE_ROOT; };
 		F0DFA57326468AD10042129B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		0B628175235DEE8100E35CAF /* Flash Chat iOS13 */ = {
 			isa = PBXGroup;
 			children = (
+				F0264D602673665F006D18D9 /* Helpers */,
 				F0DFA57F2646C5AE0042129B /* Supporting Files */,
 				F0DFA57E2646C5650042129B /* Constants */,
 				0B628194235DF03A00E35CAF /* Models */,
@@ -115,6 +118,14 @@
 				F0DFA56C264687EA0042129B /* Message.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F0264D602673665F006D18D9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F0264D612673666F006D18D9 /* AlertController.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F0DFA57E2646C5650042129B /* Constants */ = {
@@ -225,6 +236,7 @@
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
 				F0DFA56A264686730042129B /* Constants.swift in Sources */,
 				F0DFA56D264687EA0042129B /* Message.swift in Sources */,
+				F0264D622673666F006D18D9 /* AlertController.swift in Sources */,
 				0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */,
 				0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */,
 				F0DFA57526468AD10042129B /* MessageCell.swift in Sources */,
