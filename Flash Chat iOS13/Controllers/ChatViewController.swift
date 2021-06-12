@@ -39,9 +39,7 @@ class ChatViewController: UIViewController {
                 self.messages = []
                 
                 if let e = error {
-                    let alert = UIAlertController(title: "Error", message: "There was an issue retrieving data from Firestore; \(e)", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    UIAlertController.showAlert(message: e.localizedDescription, from: self)
                 } else {
                     if let snapshotDocuments = querySnapshot?.documents {
                         for doc in snapshotDocuments {
@@ -70,9 +68,7 @@ class ChatViewController: UIViewController {
                 Constants.Firestore.dateField: Date().timeIntervalSince1970
             ]) { (error) in
                 if let e = error {
-                    let alert = UIAlertController(title: "Error", message: "There was an issue saving data to firestore; \(e)", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    UIAlertController.showAlert(message: e.localizedDescription, from: self)
                 } else {
                     DispatchQueue.main.async {
                         self.messageTextfield.text = ""
@@ -87,9 +83,7 @@ class ChatViewController: UIViewController {
             try Auth.auth().signOut()
             navigationController?.popToRootViewController(animated: true)
         } catch let signOutError as NSError {
-            let alert = UIAlertController(title: "Error", message: "Error signing out; \(signOutError)", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            UIAlertController.showAlert(message: signOutError.localizedDescription, from: self)
         }
     }
     

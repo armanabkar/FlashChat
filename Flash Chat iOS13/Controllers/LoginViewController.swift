@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
         if let email = emailTextfield.text, let password = passwordTextfield.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let e = error {
-                    print(e.localizedDescription)
+                    UIAlertController.showAlert(message: e.localizedDescription, from: self)
                 } else {
                     self.performSegue(withIdentifier: Constants.loginSegue, sender: self)
                 }
