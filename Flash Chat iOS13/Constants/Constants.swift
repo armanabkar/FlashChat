@@ -18,8 +18,6 @@ struct Constants {
     static let chatViewIdentifier = "ChatScreen"
     
     struct BrandColors {
-        static let purple = "BrandPurple"
-        static let lightPurple = "BrandLightPurple"
         static let blue = "BrandBlue"
         static let lightBlue = "BrandLightBlue"
     }

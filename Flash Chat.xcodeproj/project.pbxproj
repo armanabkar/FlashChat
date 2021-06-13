@@ -21,6 +21,7 @@
 		F0260A682646693F00EFB85C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F0260A672646693F00EFB85C /* FirebaseFirestore */; };
 		F0264D622673666F006D18D9 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D612673666F006D18D9 /* UIAlertControllerExtension.swift */; };
 		F0264D6A26754DC8006D18D9 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D6926754DC8006D18D9 /* UILabelExtension.swift */; };
+		F0264D6E2675F11E006D18D9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D6D2675F11E006D18D9 /* UIColorExtension.swift */; };
 		F0DFA56A264686730042129B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA569264686730042129B /* Constants.swift */; };
 		F0DFA56D264687EA0042129B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA56C264687EA0042129B /* Message.swift */; };
 		F0DFA57526468AD10042129B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA57326468AD10042129B /* MessageCell.swift */; };
@@ -43,6 +44,7 @@
 		F0260A60264657A100EFB85C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F0264D612673666F006D18D9 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		F0264D6926754DC8006D18D9 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		F0264D6D2675F11E006D18D9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		F0DFA569264686730042129B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F0DFA56C264687EA0042129B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = "Flash Chat iOS13/Message.swift"; sourceTree = SOURCE_ROOT; };
 		F0DFA57326468AD10042129B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				F0264D612673666F006D18D9 /* UIAlertControllerExtension.swift */,
 				F0264D6926754DC8006D18D9 /* UILabelExtension.swift */,
+				F0264D6D2675F11E006D18D9 /* UIColorExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */,
 				F0264D6A26754DC8006D18D9 /* UILabelExtension.swift in Sources */,
 				F0DFA57526468AD10042129B /* MessageCell.swift in Sources */,
+				F0264D6E2675F11E006D18D9 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

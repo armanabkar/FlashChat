@@ -19,6 +19,7 @@ class ChatViewController: UIViewController {
     var listener: ListenerRegistration?
     
     var messages: [Message] = []
+    var colorsForEachUser = [String: UIColor]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,6 +96,7 @@ class ChatViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension ChatViewController: UITableViewDataSource {
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
@@ -117,7 +119,10 @@ extension ChatViewController: UITableViewDataSource {
             cell.label.textColor = UIColor(named: Constants.BrandColors.lightBlue)
             let senderLabel = "\(message.sender)\n"
             cell.label.text = senderLabel + "\(message.body)"
-            cell.label.setSubTextColor(pSubString: senderLabel, pColor: .black, pWeight: .semibold)
+            if !(colorsForEachUser[message.sender] != nil) {
+                colorsForEachUser[message.sender] = .random()
+            }
+            cell.label.setSubTextColor(pSubString: senderLabel, pColor: colorsForEachUser[message.sender] ?? .black, pWeight: .semibold)
         }
         
         return cell
