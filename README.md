@@ -1,4 +1,4 @@
-# Flash Chat
+# Flash Chat  Plus
 
 A simple iOS chat app using Firebase as server. 
 

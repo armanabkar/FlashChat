@@ -22,12 +22,23 @@
 		F0264D622673666F006D18D9 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D612673666F006D18D9 /* UIAlertControllerExtension.swift */; };
 		F0264D6A26754DC8006D18D9 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D6926754DC8006D18D9 /* UILabelExtension.swift */; };
 		F0264D6E2675F11E006D18D9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D6D2675F11E006D18D9 /* UIColorExtension.swift */; };
+		F0264D7B2677B1D3006D18D9 /* Flash_Chat_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D7A2677B1D3006D18D9 /* Flash_Chat_UITests.swift */; };
 		F0DFA56A264686730042129B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA569264686730042129B /* Constants.swift */; };
 		F0DFA56D264687EA0042129B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA56C264687EA0042129B /* Message.swift */; };
 		F0DFA57526468AD10042129B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA57326468AD10042129B /* MessageCell.swift */; };
 		F0DFA57626468AD10042129B /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0DFA57426468AD10042129B /* MessageCell.xib */; };
 		F0DFA57A2646BA740042129B /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F0DFA5792646BA740042129B /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0264D7D2677B1D3006D18D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B62816B235DEE8100E35CAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B628172235DEE8100E35CAF;
+			remoteInfo = "Flash Chat";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B628173235DEE8100E35CAF /* Flash Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flash Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +56,9 @@
 		F0264D612673666F006D18D9 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		F0264D6926754DC8006D18D9 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		F0264D6D2675F11E006D18D9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		F0264D782677B1D3006D18D9 /* Flash Chat UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flash Chat UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0264D7A2677B1D3006D18D9 /* Flash_Chat_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flash_Chat_UITests.swift; sourceTree = "<group>"; };
+		F0264D7C2677B1D3006D18D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0DFA569264686730042129B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F0DFA56C264687EA0042129B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = "Flash Chat iOS13/Message.swift"; sourceTree = SOURCE_ROOT; };
 		F0DFA57326468AD10042129B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
@@ -62,6 +76,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F0264D752677B1D3006D18D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				0B628175235DEE8100E35CAF /* Flash Chat iOS13 */,
+				F0264D792677B1D3006D18D9 /* Flash Chat UITests */,
 				0B628174235DEE8100E35CAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				0B628173235DEE8100E35CAF /* Flash Chat.app */,
+				F0264D782677B1D3006D18D9 /* Flash Chat UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +157,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		F0264D792677B1D3006D18D9 /* Flash Chat UITests */ = {
+			isa = PBXGroup;
+			children = (
+				F0264D7A2677B1D3006D18D9 /* Flash_Chat_UITests.swift */,
+				F0264D7C2677B1D3006D18D9 /* Info.plist */,
+			);
+			path = "Flash Chat UITests";
+			sourceTree = "<group>";
+		};
 		F0DFA57E2646C5650042129B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,18 +211,40 @@
 			productReference = 0B628173235DEE8100E35CAF /* Flash Chat.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F0264D772677B1D3006D18D9 /* Flash Chat UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0264D7F2677B1D3006D18D9 /* Build configuration list for PBXNativeTarget "Flash Chat UITests" */;
+			buildPhases = (
+				F0264D742677B1D3006D18D9 /* Sources */,
+				F0264D752677B1D3006D18D9 /* Frameworks */,
+				F0264D762677B1D3006D18D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0264D7E2677B1D3006D18D9 /* PBXTargetDependency */,
+			);
+			name = "Flash Chat UITests";
+			productName = "Flash Chat UITests";
+			productReference = F0264D782677B1D3006D18D9 /* Flash Chat UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0B62816B235DEE8100E35CAF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Arman Abkar";
 				TargetAttributes = {
 					0B628172235DEE8100E35CAF = {
 						CreatedOnToolsVersion = 11.1;
+					};
+					F0264D772677B1D3006D18D9 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 0B628172235DEE8100E35CAF;
 					};
 				};
 			};
@@ -212,6 +266,7 @@
 			projectRoot = "";
 			targets = (
 				0B628172235DEE8100E35CAF /* Flash Chat */,
+				F0264D772677B1D3006D18D9 /* Flash Chat UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,6 +281,13 @@
 				F0260A61264657A100EFB85C /* GoogleService-Info.plist in Resources */,
 				0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */,
 				0B62817E235DEE8100E35CAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0264D762677B1D3006D18D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +313,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F0264D742677B1D3006D18D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0264D7B2677B1D3006D18D9 /* Flash_Chat_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0264D7E2677B1D3006D18D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B628172235DEE8100E35CAF /* Flash Chat */;
+			targetProxy = F0264D7D2677B1D3006D18D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0B62817C235DEE8100E35CAF /* Main.storyboard */ = {
@@ -427,6 +505,46 @@
 			};
 			name = Release;
 		};
+		F0264D802677B1D3006D18D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMW26WR72K;
+				INFOPLIST_FILE = "Flash Chat UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.armanabkar.Flash-Chat-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flash Chat";
+			};
+			name = Debug;
+		};
+		F0264D812677B1D3006D18D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMW26WR72K;
+				INFOPLIST_FILE = "Flash Chat UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.armanabkar.Flash-Chat-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flash Chat";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -444,6 +562,15 @@
 			buildConfigurations = (
 				0B628188235DEE8400E35CAF /* Debug */,
 				0B628189235DEE8400E35CAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0264D7F2677B1D3006D18D9 /* Build configuration list for PBXNativeTarget "Flash Chat UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0264D802677B1D3006D18D9 /* Debug */,
+				F0264D812677B1D3006D18D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
