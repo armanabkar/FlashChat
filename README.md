@@ -11,5 +11,6 @@ This app is based on the [Flash-Chat-iOS13-Completed](https://github.com/appbrew
 - UIAlert for possible errors (instead of just printing them)
 - Some Refactorings
 - UI Improvements
-- Unit Testing / UI Testing 
+- Random colors for users' emails
+- Unit/UI Testing 
 - Swift Package Manager (instead of Cocoapods)

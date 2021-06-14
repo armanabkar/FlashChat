@@ -81,13 +81,7 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
-        do {
-            try Auth.auth().signOut()
-            listener?.remove()
-            navigationController?.popToRootViewController(animated: true)
-        } catch let signOutError as NSError {
-            UIAlertController.showAlert(message: signOutError.localizedDescription, from: self)
-        }
+        Authentication.logout(sender: self, listener: listener, navigationController: navigationController)
     }
     
 }
