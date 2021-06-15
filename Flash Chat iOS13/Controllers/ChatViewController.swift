@@ -17,7 +17,6 @@ class ChatViewController: UIViewController {
     
     let db = Firestore.firestore()
     var listener: ListenerRegistration?
-    
     var messages: [Message] = []
     var colorsForEachUser = [String: UIColor]()
     
@@ -27,7 +26,6 @@ class ChatViewController: UIViewController {
         tableView.dataSource = self
         title = Constants.appName
         navigationItem.hidesBackButton = true
-        
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         
         loadMessages()
@@ -37,7 +35,6 @@ class ChatViewController: UIViewController {
         listener = db.collection(Constants.Firestore.collectionName)
             .order(by: Constants.Firestore.dateField)
             .addSnapshotListener { (querySnapshot, error) in
-                
                 self.messages = []
                 
                 if let e = error {
@@ -46,7 +43,8 @@ class ChatViewController: UIViewController {
                     if let snapshotDocuments = querySnapshot?.documents {
                         for doc in snapshotDocuments {
                             let data = doc.data()
-                            if let messageSender = data[Constants.Firestore.senderField] as? String, let messageBody = data[Constants.Firestore.bodyField] as? String {
+                            if let messageSender = data[Constants.Firestore.senderField] as? String,
+                               let messageBody = data[Constants.Firestore.bodyField] as? String {
                                 let newMessage = Message(sender: messageSender, body: messageBody)
                                 self.messages.append(newMessage)
                                 
@@ -94,8 +92,8 @@ class ChatViewController: UIViewController {
 
 
 // MARK: - UITableViewDataSource
+
 extension ChatViewController: UITableViewDataSource {
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
