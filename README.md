@@ -1,4 +1,4 @@
-# Flash Chat  Plus
+# Flash Chat Plus
 
 A simple iOS chat app using Firebase as server. 
 
@@ -11,6 +11,6 @@ This app is based on the [Flash-Chat-iOS13-Completed](https://github.com/appbrew
 - UIAlert for possible errors (instead of just printing them)
 - Some Refactorings
 - UI Improvements
-- Random colors for users' emails
+- Better message bubbles with random colors for usernames
 - Unit/UI Testing 
 - Swift Package Manager (instead of Cocoapods)

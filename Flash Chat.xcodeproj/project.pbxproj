@@ -23,8 +23,6 @@
 		F0264D6A26754DC8006D18D9 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D6926754DC8006D18D9 /* UILabelExtension.swift */; };
 		F0264D6E2675F11E006D18D9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D6D2675F11E006D18D9 /* UIColorExtension.swift */; };
 		F0264D7B2677B1D3006D18D9 /* Flash_Chat_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D7A2677B1D3006D18D9 /* Flash_Chat_UITests.swift */; };
-		F0264D862677EABA006D18D9 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D852677EABA006D18D9 /* Authentication.swift */; };
-		F0264D8C2677ED66006D18D9 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D8B2677ED66006D18D9 /* Messages.swift */; };
 		F0DFA56A264686730042129B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA569264686730042129B /* Constants.swift */; };
 		F0DFA56D264687EA0042129B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA56C264687EA0042129B /* Message.swift */; };
 		F0DFA57526468AD10042129B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA57326468AD10042129B /* MessageCell.swift */; };
@@ -61,8 +59,6 @@
 		F0264D782677B1D3006D18D9 /* Flash Chat UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flash Chat UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0264D7A2677B1D3006D18D9 /* Flash_Chat_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flash_Chat_UITests.swift; sourceTree = "<group>"; };
 		F0264D7C2677B1D3006D18D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0264D852677EABA006D18D9 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
-		F0264D8B2677ED66006D18D9 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		F0DFA569264686730042129B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F0DFA56C264687EA0042129B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = "Flash Chat iOS13/Message.swift"; sourceTree = SOURCE_ROOT; };
 		F0DFA57326468AD10042129B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
@@ -111,7 +107,6 @@
 		0B628175235DEE8100E35CAF /* Flash Chat iOS13 */ = {
 			isa = PBXGroup;
 			children = (
-				F0264D842677EA8D006D18D9 /* Services */,
 				F0264D602673665F006D18D9 /* Helpers */,
 				F0DFA57F2646C5AE0042129B /* Supporting Files */,
 				F0DFA57E2646C5650042129B /* Constants */,
@@ -169,15 +164,6 @@
 				F0264D7C2677B1D3006D18D9 /* Info.plist */,
 			);
 			path = "Flash Chat UITests";
-			sourceTree = "<group>";
-		};
-		F0264D842677EA8D006D18D9 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				F0264D852677EABA006D18D9 /* Authentication.swift */,
-				F0264D8B2677ED66006D18D9 /* Messages.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		F0DFA57E2646C5650042129B /* Constants */ = {
@@ -315,9 +301,7 @@
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
-				F0264D8C2677ED66006D18D9 /* Messages.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
-				F0264D862677EABA006D18D9 /* Authentication.swift in Sources */,
 				F0DFA56A264686730042129B /* Constants.swift in Sources */,
 				F0DFA56D264687EA0042129B /* Message.swift in Sources */,
 				F0264D622673666F006D18D9 /* UIAlertControllerExtension.swift in Sources */,
