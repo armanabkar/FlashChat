@@ -23,7 +23,7 @@
 		F0264D6A26754DC8006D18D9 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D6926754DC8006D18D9 /* UILabelExtension.swift */; };
 		F0264D6E2675F11E006D18D9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D6D2675F11E006D18D9 /* UIColorExtension.swift */; };
 		F0264D7B2677B1D3006D18D9 /* Flash_Chat_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0264D7A2677B1D3006D18D9 /* Flash_Chat_UITests.swift */; };
-		F0DFA56A264686730042129B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA569264686730042129B /* Constants.swift */; };
+		F0DFA56A264686730042129B /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA569264686730042129B /* K.swift */; };
 		F0DFA56D264687EA0042129B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA56C264687EA0042129B /* Message.swift */; };
 		F0DFA57526468AD10042129B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DFA57326468AD10042129B /* MessageCell.swift */; };
 		F0DFA57626468AD10042129B /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0DFA57426468AD10042129B /* MessageCell.xib */; };
@@ -59,7 +59,7 @@
 		F0264D782677B1D3006D18D9 /* Flash Chat UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flash Chat UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0264D7A2677B1D3006D18D9 /* Flash_Chat_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flash_Chat_UITests.swift; sourceTree = "<group>"; };
 		F0264D7C2677B1D3006D18D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0DFA569264686730042129B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F0DFA569264686730042129B /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		F0DFA56C264687EA0042129B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = "Flash Chat iOS13/Message.swift"; sourceTree = SOURCE_ROOT; };
 		F0DFA57326468AD10042129B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		F0DFA57426468AD10042129B /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		F0DFA57E2646C5650042129B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				F0DFA569264686730042129B /* Constants.swift */,
+				F0DFA569264686730042129B /* K.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
-				F0DFA56A264686730042129B /* Constants.swift in Sources */,
+				F0DFA56A264686730042129B /* K.swift in Sources */,
 				F0DFA56D264687EA0042129B /* Message.swift in Sources */,
 				F0264D622673666F006D18D9 /* UIAlertControllerExtension.swift in Sources */,
 				0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */,

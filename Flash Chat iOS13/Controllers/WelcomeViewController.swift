@@ -25,7 +25,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        animateText(Constants.appName)
+        animateText(K.appName)
     }
     
     private func animateText(_ text: String) {

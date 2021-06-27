@@ -24,16 +24,16 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
-        title = Constants.appName
+        title = K.appName
         navigationItem.hidesBackButton = true
-        tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
+        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         
         loadMessages()
     }
     
     func loadMessages() {
-        listener = db.collection(Constants.Firestore.collectionName)
-            .order(by: Constants.Firestore.dateField)
+        listener = db.collection(K.Firestore.collectionName)
+            .order(by: K.Firestore.dateField)
             .addSnapshotListener { (querySnapshot, error) in
                 self.messages = []
                 
@@ -43,8 +43,8 @@ class ChatViewController: UIViewController {
                     if let snapshotDocuments = querySnapshot?.documents {
                         for doc in snapshotDocuments {
                             let data = doc.data()
-                            if let messageSender = data[Constants.Firestore.senderField] as? String,
-                               let messageBody = data[Constants.Firestore.bodyField] as? String {
+                            if let messageSender = data[K.Firestore.senderField] as? String,
+                               let messageBody = data[K.Firestore.bodyField] as? String {
                                 let newMessage = Message(sender: messageSender, body: messageBody)
                                 self.messages.append(newMessage)
                                 
@@ -62,10 +62,10 @@ class ChatViewController: UIViewController {
     
     @IBAction func sendPressed(_ sender: UIButton) {
         if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
-            db.collection(Constants.Firestore.collectionName).addDocument(data: [
-                Constants.Firestore.senderField: messageSender,
-                Constants.Firestore.bodyField: messageBody,
-                Constants.Firestore.dateField: Date().timeIntervalSince1970
+            db.collection(K.Firestore.collectionName).addDocument(data: [
+                K.Firestore.senderField: messageSender,
+                K.Firestore.bodyField: messageBody,
+                K.Firestore.dateField: Date().timeIntervalSince1970
             ]) { (error) in
                 if let e = error {
                     UIAlertController.showAlert(message: e.localizedDescription, from: self)
@@ -101,20 +101,20 @@ extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = messages[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
         
         if message.sender == Auth.auth().currentUser?.email {
             cell.leftImageView.isHidden = false
             cell.rightImageView.isHidden = true
-            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.lightBlue)
-            cell.label.textColor = UIColor(named: Constants.BrandColors.blue)
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightBlue)
+            cell.label.textColor = UIColor(named: K.BrandColors.blue)
             cell.label.text = message.body
         }
         else {
             cell.leftImageView.isHidden = true
             cell.rightImageView.isHidden = false
-            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.blue)
-            cell.label.textColor = UIColor(named: Constants.BrandColors.lightBlue)
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.blue)
+            cell.label.textColor = UIColor(named: K.BrandColors.lightBlue)
             let senderLabel = "\(message.sender)\n"
             cell.label.text = senderLabel + "\(message.body)"
             if !(colorsForEachUser[message.sender] != nil) {

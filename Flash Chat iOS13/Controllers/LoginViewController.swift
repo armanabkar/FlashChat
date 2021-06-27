@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
                 if let e = error {
                     UIAlertController.showAlert(message: e.localizedDescription, from: self)
                 } else {
-                    self.performSegue(withIdentifier: Constants.loginSegue, sender: self)
+                    self.performSegue(withIdentifier: K.loginSegue, sender: self)
                 }
             }
         }

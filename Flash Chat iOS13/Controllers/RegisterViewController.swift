@@ -24,7 +24,7 @@ class RegisterViewController: UIViewController {
                 if let e = error {
                     UIAlertController.showAlert(message: e.localizedDescription, from: self)
                 } else {
-                    self.performSegue(withIdentifier: Constants.registerSegue, sender: self)
+                    self.performSegue(withIdentifier: K.registerSegue, sender: self)
                 }
             }
         }

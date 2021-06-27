@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Constants {
+struct K {
+    
     static let appName = "⚡️FlashChat"
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"
@@ -22,10 +23,16 @@ struct Constants {
         static let lightBlue = "BrandLightBlue"
     }
     
+    struct error {
+        static let title = "Error"
+        static let invalidFieldMessage = "Please enter a valid username/password."
+    }
+    
     struct Firestore {
         static let collectionName = "messages"
         static let senderField = "sender"
         static let bodyField = "body"
         static let dateField = "date"
     }
+    
 }

@@ -18,8 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let currentUser = Auth.auth().currentUser
         if currentUser != nil {
-            let storyboard = UIStoryboard(name: Constants.storyboardName, bundle: nil);
-            let chatViewController: ChatViewController = storyboard.instantiateViewController(withIdentifier: Constants.chatViewIdentifier) as! ChatViewController;
+            let storyboard = UIStoryboard(name: K.storyboardName, bundle: nil);
+            let chatViewController: ChatViewController = storyboard.instantiateViewController(withIdentifier: K.chatViewIdentifier) as! ChatViewController;
             let rootViewController = self.window!.rootViewController as! UINavigationController;
             rootViewController.pushViewController(chatViewController, animated: true);
         }
